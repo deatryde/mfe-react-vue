@@ -2,12 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
+const mount = (element: Element) => {
+  const root = ReactDOM.createRoot(element!);
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+};
 
-export default root;
+if (process.env.NODE_ENV === 'development') {
+  const devRoot = document.querySelector('#dev-root');
+
+  if (devRoot) {
+    mount(devRoot);
+  }
+}
+
+export { mount };

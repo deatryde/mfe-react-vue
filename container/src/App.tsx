@@ -1,9 +1,11 @@
 import React from 'react';
-import MarketingApp from 'marketing/MarketingApp';
+import MarketingApp from './components/MarketingApp';
 import './index.d';
 
-console.log(MarketingApp);
-
 export default () => {
-  return <h1>Hi there</h1>;
+  return (
+    <React.Fragment>
+      <MarketingApp />
+    </React.Fragment>
+  );
 };

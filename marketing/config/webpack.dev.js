@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 
+const deps = require('../package.json').dependencies;
+
 const devConfig = {
   mode: 'development',
   devServer: {
@@ -18,6 +20,15 @@ const devConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './MarketingApp': './src/bootstrap',
+      },
+      shared: {
+        ...deps,
+        react: {
+          requiredVersion: deps['react'],
+        },
+        'react-dom': {
+          requiredVersion: deps['react-dom'],
+        },
       },
     }),
     new HtmlWebpackPlugin({

@@ -1,17 +1,15 @@
 import React from 'react';
-import {
-  Button,
-  Card,
-  CardHeader,
-  CardActions,
-  CardContent,
-  Grid,
-  Typography,
-  Box,
-  Container,
-  Link as MaterialLink,
-} from '@mui/material';
-import { Star } from '@mui/icons-material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import MaterialLink from '@mui/material/Link';
+import CardHeader from '@mui/material/CardHeader';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import Button from '@mui/material/Button';
+import Star from '@mui/icons-material/Star';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 

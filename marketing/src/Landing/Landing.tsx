@@ -1,15 +1,13 @@
 import React from 'react';
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-  Container,
-  Link as MaterialLink,
-} from '@mui/material';
+import MaterialLink from '@mui/material/Link';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
