@@ -13,7 +13,7 @@ const mount = (element: Element) => {
 };
 
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#dev-root');
+  const devRoot = document.getElementById('root');
 
   if (devRoot) {
     mount(devRoot);
