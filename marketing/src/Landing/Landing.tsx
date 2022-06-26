@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ReactElement, FC } from 'react';
 import MaterialLink from '@mui/material/Link';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
@@ -11,7 +12,7 @@ import CardContent from '@mui/material/CardContent';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-const Copyright = () => {
+const Copyright: FC = (): ReactElement => {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
@@ -24,9 +25,9 @@ const Copyright = () => {
   );
 };
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const Landing = () => {
+const Landing: FC = (): ReactElement => {
   return (
     <React.Fragment>
       <main>

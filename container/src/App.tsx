@@ -1,12 +1,19 @@
-import React from 'react';
-import MarketingApp from './components/MarketingApp';
+import React, { FC, ReactElement } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import MarketingApp from './apps/MarketingApp';
+import Header from './components/Header';
 import './index.d';
+import './App.scss';
 
-export default () => {
+const App: FC = (): ReactElement => {
   return (
-    <React.Fragment>
-      <h1>Container View</h1>
-      <MarketingApp />
-    </React.Fragment>
+    <BrowserRouter>
+      <React.Fragment>
+        <Header signedIn={false} onSignOut={() => {}} />
+        <MarketingApp />
+      </React.Fragment>
+    </BrowserRouter>
   );
 };
+
+export default App;

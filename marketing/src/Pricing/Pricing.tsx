@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ReactElement, FC } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -13,20 +14,22 @@ import Star from '@mui/icons-material/Star';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-function Copyright() {
-  return (
-    <Typography variant='body2' color='textSecondary' align='center'>
-      {'Copyright © '}
-      <MaterialLink color='inherit' href='https://material-ui.com/'>
-        Your Website
-      </MaterialLink>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
+interface TiersInterface {
+  title: string;
+  subheader?: string;
+  description: string[];
+  price: string;
+  buttonText: string;
+  buttonLink?: string;
+  buttonVariant: string;
 }
 
-const tiers = [
+interface FooterInterface {
+  title: string;
+  description: string[];
+}
+
+const tiers: TiersInterface[] = [
   {
     title: 'Free',
     price: '0',
@@ -66,7 +69,7 @@ const tiers = [
   },
 ];
 
-const footers = [
+const footers: FooterInterface[] = [
   {
     title: 'Company',
     description: ['Team', 'History', 'Contact us', 'Locations'],
@@ -96,7 +99,20 @@ const footers = [
   },
 ];
 
-export default function Pricing() {
+const Copyright: FC = (): ReactElement => {
+  return (
+    <Typography variant='body2' color='textSecondary' align='center'>
+      {'Copyright © '}
+      <MaterialLink color='inherit' href='https://material-ui.com/'>
+        Your Website
+      </MaterialLink>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+};
+
+const Pricing: FC = (): ReactElement => {
   return (
     <React.Fragment>
       <Container maxWidth='sm' component='main' className={'heroContent'}>
@@ -205,4 +221,6 @@ export default function Pricing() {
       </Container>
     </React.Fragment>
   );
-}
+};
+
+export default Pricing;

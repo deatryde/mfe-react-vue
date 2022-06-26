@@ -1,11 +1,12 @@
 import React from 'react';
+import type { FC, ReactElement } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 import Landing from './Landing';
 import Pricing from './Pricing';
 import './App.scss';
 
-export default () => {
+const App: FC = (): ReactElement => {
   return (
     <React.Fragment>
       <StyledEngineProvider>
@@ -19,3 +20,5 @@ export default () => {
     </React.Fragment>
   );
 };
+
+export default App;
