@@ -1,5 +1,5 @@
-import React, { MouseEventHandler } from 'react';
-import type { FC, ReactElement } from 'react';
+import React from 'react';
+import type { FC, ReactElement, MouseEventHandler } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
